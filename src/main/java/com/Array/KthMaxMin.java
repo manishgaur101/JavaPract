@@ -1,8 +1,6 @@
 package com.Array;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class KthMaxMin {
     public static void main(String[] args) {
@@ -24,7 +22,31 @@ public class KthMaxMin {
 
         //Find the smallest Number in array
         //kthMin(runs,2);
-        kthMinWithJava8(runs,2);
+        int kSmallest = 4;
+        kthMinWithJava8(runs,kSmallest);
+
+
+        //Using Java8
+        System.out.println("\n------------- Using Java8-------------------");
+        System.out.printf("\n%d Largest number is: ",kLargest);
+        Optional<Integer> result = Arrays.stream(runs)
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .distinct()
+                .skip(kLargest-1)
+                .findFirst();
+
+        result.ifPresent(System.out::println);
+
+        System.out.printf("\n%d smallest number is: ",kSmallest);
+        Optional<Integer> result2 = Arrays.stream(runs)
+                .boxed()
+                .sorted()
+                .distinct()
+                .skip(kSmallest-1)
+                .findFirst();
+        result2.ifPresent(System.out::println);
+
     }
 
     /**
