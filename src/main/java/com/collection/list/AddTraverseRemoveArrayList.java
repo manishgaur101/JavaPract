@@ -1,9 +1,6 @@
 package com.collection.list;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class AddTraverseRemoveArrayList {
@@ -52,10 +49,10 @@ public class AddTraverseRemoveArrayList {
         //anyList.removeIf(((Integer)2)::equals);   //java8 method reference
         printListItems(anyList);
     }
-    public static void printListItems(List l){
-        ListIterator li = l.listIterator();
-        while(li.hasNext()){
-            System.out.println(li.next());
-        }
+    public static void printListItems(Collection l){
+            Iterator li = l.iterator();
+            while (li.hasNext()) {
+                System.out.println(li.next());
+            }
     }
 }
