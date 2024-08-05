@@ -13,6 +13,12 @@ public class AddInHashMap {
         siMap.put("One", 1);
         siMap.put("Two", 2);
         siMap.put("Three", 3);
+        // Contrary to HashTable HashMap allows one null key and n number of null values
+        siMap.put(null,null);
+        //Map does not allow duplicate keys if you add then old value will be updated
+        siMap.put("Two",22);
+        System.out.println(siMap);
+
 
         //Using putAll method
         Map<String, Integer> map2 = new HashMap<>();
