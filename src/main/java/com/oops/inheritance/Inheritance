@@ -1,0 +1,11 @@
+Inheritance - Is a relationship between child and parent, child will get automatic access to properties and behaviours of parent.
+              Private properties or methods will not be provided to child for access.
+              default properties and methods will only be accessible to child within same package.
+              protected properties and methods will be accessible to child from any package.
+
+Types -
+Simple (One parent, one child)
+Multiple (Multiple parent, one child) - Not allowed in java due to diamond problem.
+          Diamond problem - when multiple parent classes having same method implementation then child will be confused.
+Multilevel - (GrandParent - Parent - Child Class)
+Hierarchical - Multiple child and one parent.
