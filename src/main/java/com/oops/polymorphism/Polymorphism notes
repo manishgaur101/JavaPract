@@ -1,0 +1,21 @@
+Polymorphism - Having more than one form.
+
+- Ability of objects of different classes to respond to the same method call in different way.
+- It allows to write reusable and flexible code.
+
+Real world example - GOD
+
+When you father calls you - you react differently.
+When your siblings call you - you react differntly.
+When your spouse calls you - You react differently.
+
+Types in java -
+
+Compile time -
+ - Achieved by Method overloading and Operator overloading.
+Run time -
+ - Achieved by Overriding.
+
+Examples -
+Operator overloading - 5+3 works as addition while "5"+3 works as concatination.
+
