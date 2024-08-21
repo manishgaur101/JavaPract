@@ -1,0 +1,7 @@
+abstraction - a concept that allows you to focus on what an object does instead of how it does it
+
+- Hiding the complex implementation from the user and shows only the relevant information.
+- It's provided with a contract between client and server, in java terms it's provided via inheritance or abstract class.
+- Benefit is that if in future we want to update the implementation then we can do without changing the contract with user.
+
+Real world example - fan and switch
