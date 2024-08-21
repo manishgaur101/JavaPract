@@ -1,0 +1,21 @@
+It means following:
+- Keeping properties and behaviour at a same place
+- Showing only the required details to outside world means DATA HIDING
+
+- Data Hiding with encapsulation we achieve with ACCESS MODIFIERS (public, private, default, protected).
+- We give getter setter methods for the properties we want to allow access.
+
+-Encapsulation example - POJO classes.
+
+How to implement this concept in JAVA -
+----------------------------------------
+1. Access modifiers - helps to provide data scope.
+2. Getter/Setters   - helps to maintain data integrity via controlled allowed access.
+                      By controlled access means no one can directly update the data we can apply checks also.
+                      i.e. BankAccount class where the !(dispense cash > account balance)
+3. Import & Package - Helps to enhance modularity.
+                      Package solves naming conflicts for classes and interfaces.(java automatic imported package - java.lang)
+                      Import is used to access class or interface from another package.
+                      With packages we can keep the related data in same package and can hide the classes with access Modifiers.
+                      To hide class - access modifiers - default(package-private), private inner class, protected(same package or child classes)
+                      Using Module in java9+
