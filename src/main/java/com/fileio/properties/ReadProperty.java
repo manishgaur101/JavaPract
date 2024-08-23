@@ -12,7 +12,7 @@ public final class ReadProperty {
     }
 
     //This way is suitable as using java8 does not seem much useful
-    public static String getValue(String key){
+    public static String getValue(Enum key){
         String value = "";
         // Create Properties object
         Properties prop = new Properties();
@@ -25,14 +25,14 @@ public final class ReadProperty {
         }
         catch (IOException e){e.printStackTrace();}
         //get the property value
-        value = prop.getProperty(key);// If key not found then null will be returned.
+        value = prop.getProperty(String.valueOf(key));// If key not found then null will be returned.
         if(Objects.isNull(value)){
             throw new RuntimeException();
         }
         return value;
     }
 
-    public static String getValueByJava8(String keyValue){
+    public static String getValueByJava8(Enum keyValue){
         String value = "";
         //Create Properties object
         Properties prop = new Properties();
@@ -42,7 +42,7 @@ public final class ReadProperty {
         catch (IOException e){e.printStackTrace();}
         //functional interface
         Function<String,String> getProperty = key -> prop.getProperty(key);
-        value  =  getProperty.apply(keyValue);
+        value  =  getProperty.apply(String.valueOf(keyValue));
         if(Objects.isNull(value)){
             throw new RuntimeException("Key not present, check config.properties.");
         }

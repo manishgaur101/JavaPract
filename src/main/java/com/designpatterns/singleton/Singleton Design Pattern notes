@@ -1,0 +1,9 @@
+Singleton design pattern -
+
+- It ensures that only single instance of a class is created per JVM in any situation.
+
+- Can be implemented in various ways -
+1. Eager Initialization
+2. Lazy Initialization
+3. ThreadSafe singleton using Enum
+4. Bill Pugh Singleton

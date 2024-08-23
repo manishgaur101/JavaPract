@@ -1,0 +1,20 @@
+-	Used to decouple the object creation logic from implementation, it provides encapsulation and with interface it provides abstraction oops feature.
+-	Used to create object without specifying the exact class of obj that will be created.
+-	Suitable for scenarios where obj. creation logic needs to be encapsulated or varied based on the run time conditions.
+-	Business logic is written in implementing classes(ChromeDriver,FirefoxDriver), and Factory class just creating the objects of each implementing class as per client’s need.
+-	In this pattern the client does not know how the obj. is getting created, and the factory class come to know which implementation is going to be called at runtime.
+
+Ways to created -
+
+1. With Interface/abstract class and implementing classes, who will be instantiated from factory and client will call factory.
+
+2. Factory class with supplier interface with inline variable declaration.
+
+Usecase -
+Single Product Creation: When you need to create a single type of object and want to encapsulate the creation
+logic. For example, if you have a Shape interface and multiple implementations like Circle, Square, etc.,
+you can use a factory to create these shapes based on input parameters.
+
+Drawbacks -
+
+Solution - Abstract Factory design pattern

@@ -1,0 +1,20 @@
+-The Abstract Factory pattern is a powerful way to manage the complexity of creating families of
+related objects in test automation.
+
+
+UseCase -
+----------
+Multiple Related Products: When you need to create multiple related objects that belong to a family.
+For example, if you are designing a UI toolkit that supports multiple themes (like dark and light themes),
+you can use an abstract factory to create theme-specific components like buttons, text fields, etc.
+
+Test Automation UseCase - MultiBrowser supporting different mode options
+------------------------------------------------------------------------
+Products - ChromeDriver, FirefoxDriver
+Family of related Objects - ChromeDriver obj to run with "--disable-extensions" ChromeOptions
+                            FireFoxdRIVER OBJ to run with same above mode.
+                           Next time Run the script in both browsers in some other mode.
+So the Script should support to run in multiple modes by all the Browsers.
+
+
+
