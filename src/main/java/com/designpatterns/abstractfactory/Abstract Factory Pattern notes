@@ -16,5 +16,23 @@ Family of related Objects - ChromeDriver obj to run with "--disable-extensions" 
                            Next time Run the script in both browsers in some other mode.
 So the Script should support to run in multiple modes by all the Browsers.
 
+Can't we do the Code sample shown here with Factory desing pattern?
+-----------------
+Can do, but there are some scenario by which we can identify when to use which -
+Factory pattern -
+Focus: The focus is on a single product. The Factory Method is about creating one product (e.g., a specific WebDriver instance) at a time.
+Abstract factory pattern -
+Focus: The focus is on creating related products or product families. This pattern is used when you need to create multiple related objects that belong together (e.g., WebDriver and BrowserOptions).
+Structure: You have a factory interface with methods for creating various products, and concrete factories that implement these methods.
+Example: You have a factory that can create both a WebDriver and its corresponding BrowserOptions for a specific browser.
+Abstract Factory is appropriate when:
+---------------------------
 
+You need to create a family of related products (e.g., WebDriver and BrowserOptions).
+You want to ensure that the objects created together are compatible (e.g., a ChromeDriver should be used with ChromeOptions).
+Your system needs to be scalable, and you anticipate adding more families of products in the future.
 
+In test automation, if you only need to create different types of WebDriver instances, the Factory Method
+pattern might be sufficient. However, if you anticipate the need to create multiple related objects
+(like WebDriver and its options), the Abstract Factory pattern provides better scalability and
+maintainability.
