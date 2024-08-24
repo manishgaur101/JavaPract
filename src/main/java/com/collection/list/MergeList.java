@@ -33,5 +33,43 @@ public class MergeList {
 
         System.out.println("Merged List: " + newlist);
 
+        //---------------------
+        /**Below will give error coz Size cannot be changes when
+         *List is made of Arrays.asList();
+         */
+        /*System.out.println(mergeList(
+           Arrays.asList("Manish","Kumar"),
+            Arrays.asList("Manish","Gaur")
+            ));*/
+        /**
+         * Below are two ways to ADD Items in a list.
+         * 1. by add() function
+         * 2. by Collections.addAll(listname,"data1","data2")
+         */
+        List<String> listA = new ArrayList<>();
+        listA.add("Manish");
+        listA.add("Kumar");
+
+        /**
+         * Second way to add data in a List-- Preety Cool! hmmm
+         */
+        Collections.addAll(listA,"Gaur","Neha","Gaur");
+
+        /**Since we are merging in list1 so second list we can send
+         *Arrays.asList();
+         */
+        System.out.println(mergeList(
+                listA,
+                Arrays.asList("Manish","Gaur")
+        ));
+
+    }
+
+    /**
+     * Function to merge two lists.
+     */
+    public static List<String> mergeList(List<String> list1, List<String> list2){
+        list1.addAll(list2);
+        return list1;
     }
 }
