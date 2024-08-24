@@ -1,0 +1,8 @@
+Usages  - When constructing object with multiple optional parameters.
+Implementation stratergies -
+1. Using External Builder Class
+   Separate builder class encapsulates the creation logic and provide methods to set individual attributes.
+2. Static Inner class
+3. Lombak plugin
+4. Lamdas with builder pattern
+
