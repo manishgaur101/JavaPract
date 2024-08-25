@@ -36,6 +36,8 @@ public class MergeList {
         //---------------------
         /**Below will give error coz Size cannot be changes when
          *List is made of Arrays.asList();
+         * But we can make modifiable array like this
+         * List<String> list = new ArrayList<>(Arrays.asList("Kaynat","Khan"));
          */
         /*System.out.println(mergeList(
            Arrays.asList("Manish","Kumar"),
