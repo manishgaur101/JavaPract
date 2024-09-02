@@ -24,7 +24,8 @@ public class SortList {
 
         //Sorting in descending order
         Collections.sort(sList,(a,b)->b.compareTo(a));
-        Collections.sort(sVector,(a,b)->b.compareTo(a));
+        //Collections.sort(sVector,(a,b)->b.compareTo(a));
+        Collections.sort(sVector,Collections.reverseOrder());
         System.out.printf("\nDescending order sorted list:\n%s\n",sList);
         System.out.printf("\nDescending order sorted vector:\n%s\n",sVector);
     }

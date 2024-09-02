@@ -48,6 +48,14 @@ public class Armstrong {
     public static boolean isArmstrong(int n){
         String strData = Integer.toString(n);
         int dataLength = strData.length();
+
+        //Line 54 can also be done like -
+        /**
+         * int sum = numberStr.chars()  // Stream each character (digit)
+         *                            .map(Character::getNumericValue)  // Convert each char to its numeric value
+         *                            .map(digit -> (int) Math.pow(digit, numDigits))  // Raise each digit to the power of numDigits
+         *                            .sum();  // Sum all the results
+         */
         int sum  = strData.chars()
                 .map(a -> (int)Math.pow(Character.getNumericValue(a),dataLength))
                 .sum();

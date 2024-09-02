@@ -30,9 +30,9 @@ public class SortingValuesMap {
         //Ascending Order using Java8
         Map<String,Integer> ascSortedMap = map.entrySet().stream()
                 .sorted(Map.Entry.<String,Integer>comparingByValue())
-                .collect(Collectors.toMap(Map.Entry::getKey,
-                        Map.Entry::getValue,
-                        (k,v)->k,LinkedHashMap::new));
+                .collect(Collectors.toMap(  Map.Entry::getKey,
+                                            Map.Entry::getValue,
+                                            (k,v)->k,LinkedHashMap::new));
         //.forEach((k,v)->System.out.println("Key:"+k+" ,Value: "+v));
         System.out.println("Ascending Order: "+ascSortedMap);
 

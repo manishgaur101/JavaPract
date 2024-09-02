@@ -17,7 +17,7 @@ public class Fibonacci {
             place--;
         }
         System.out.println();
-        for (int i = 1; i <= 10; i++)
+        for (int i = 0; i <= 10; i++)
             System.out.println(isFibonacci(i) ? i + " is a Fibonacci Number" :
                     i + " is a not Fibonacci Number");
 

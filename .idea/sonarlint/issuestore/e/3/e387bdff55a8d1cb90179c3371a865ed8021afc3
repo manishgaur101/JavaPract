@@ -1,4 +1,6 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(º£ôú8¦ì¿¯Œ2
-G	java:S106"+Replace this use of System.out by a logger.(ËÓ–ó8¨ºÔ¯Œ2
-G	java:S106"+Replace this use of System.out by a logger.(ˆŸ«€8¬ºÔ¯Œ2
+e
+java:S2583"CChange this condition so that it does not always evaluate to "true"(™é†—ûÿÿÿÿ8Õ³‹Ë2
+G	java:S106"+Replace this use of System.out by a logger.(º£ôú8á³‹Ë2
+G	java:S106"+Replace this use of System.out by a logger.(ËÓ–ó8ä³‹Ë2
+G	java:S106"+Replace this use of System.out by a logger.(ˆŸ«€8å³‹Ë2
