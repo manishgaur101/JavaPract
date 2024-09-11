@@ -1,5 +1,6 @@
 package com.Array;
 
+import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -13,6 +14,13 @@ public class MergeIntArrayAndRemoveDuplicate {
         int[] a = {1,2,3,4,5,2,3};
         int[] b = {5,6,7,8};
         mergeRemoveDuplicates(a,b);
+
+        //another approach - good one
+        int[] merged = IntStream.concat(Arrays.stream(a),Arrays.stream(b)).toArray();
+        Set<Integer> mergedSet = IntStream.of(merged)
+                .boxed()
+                .collect(Collectors.toSet());
+        System.out.println("merged and removed duplicates:" +mergedSet);
     }
 
     public static void mergeRemoveDuplicates(int[] a, int[] b){

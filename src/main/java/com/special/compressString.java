@@ -17,5 +17,12 @@ public class compressString {
                 .collect(Collectors.groupingBy(e->e,LinkedHashMap::new,Collectors.counting()))
                 .forEach((k,v)->output.append(v).append(k));
         System.out.println("Output String: "+output);
+
+        //can also do like below without StringBuilder
+        /** Map<Character,Long> iMap = given.chars()
+         *.mapToObj(c -> (char)c)
+         *.collect(Collectors.groupingBy(e->e,LinkedHashMap::new,Collectors.counting()));
+         *  iMap.forEach((k,v)-> System.out.print(k));
+         */
     }
 }

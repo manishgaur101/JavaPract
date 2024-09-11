@@ -15,6 +15,14 @@ public class ReverseWord {
             System.out.print(sh+ " ");
         }
 
+        /**
+         * Another way
+         *
+         * for(String s : a){
+         *             System.out.print(new StringBuilder(s).reverse().append(" "));
+         *         }
+         */
+
 
     }
 }
