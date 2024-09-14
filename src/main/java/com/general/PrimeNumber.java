@@ -37,6 +37,8 @@ public class PrimeNumber {
         if (n < 2){
             return false;
         }
+        //In Java under loops implicit type casting is handled by java,this is why we do not require
+        // casting below as Math.sqrt returns double
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0)
                 return false;
