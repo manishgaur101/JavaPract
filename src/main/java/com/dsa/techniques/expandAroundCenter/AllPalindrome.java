@@ -1,4 +1,4 @@
-package com.dsa.techniques.twopointer;
+package com.dsa.techniques.expandAroundCenter;
 
 import java.util.*;
 

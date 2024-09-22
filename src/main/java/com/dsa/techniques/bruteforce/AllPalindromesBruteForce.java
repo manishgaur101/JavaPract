@@ -4,10 +4,16 @@ import java.util.*;
 
 /**
  * Program to find all possible palindrome from String
- * using technique - BruteForce
+ * using technique - BruteForce and Teo Pointer
+ * Other technique to solve this - expandAround Center
  */
 public class AllPalindromesBruteForce {
 
+    /**
+     * Method checking palindrome using Two Pointer Technique.
+     * @param s
+     * @return
+     */
     private static boolean isPalindrome(String s){
         int left =  0;
         int right =  s.length()-1;
