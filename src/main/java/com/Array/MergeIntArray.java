@@ -17,6 +17,10 @@ public class MergeIntArray {
 
         int[] d =  mergeIntArray(a,b);
         System.out.println("Merged array without Stream:\n"+Arrays.toString(d));
+
+        System.out.println("---Array merge using System class---");
+        int [] result_merged = mergeIntArray(a,b);
+        System.out.println(Arrays.toString(result_merged));
     }
 
     public static int[] mergeIntArray(int[] a, int[] b){
@@ -29,5 +33,12 @@ public class MergeIntArray {
             c[index++] = j;
         }
         return c;
+    }
+
+    public static int[] arrayCopy(int[] a, int[] b){
+        int[] mergedArr = new int[a.length + b.length];
+        System.arraycopy(b,0,mergedArr,0,b.length);
+        System.out.println(Arrays.toString(mergedArr));
+        return mergedArr;
     }
 }

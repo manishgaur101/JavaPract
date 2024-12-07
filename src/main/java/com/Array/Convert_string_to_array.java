@@ -17,7 +17,7 @@ public class Convert_string_to_array {
     // Printing the array elements
     System.out.println(Arrays.toString(arr_statement1)); //Not expected output
     System.out.println(Arrays.toString(statement1.trim()
-            .replaceAll("[^a-zA-Z0-9\\s]]","")
+            .replaceAll("[^a-zA-Z0-9\\s]","")
                     .replace(".","")
             .split("\\s+")));
     }
