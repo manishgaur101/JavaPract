@@ -11,5 +11,6 @@ public class Fxnsubstring {
         String str2 = str.substring(4,str.length());
         System.out.println(str1);
         System.out.println(str2);
+        System.out.println(str.substring(4));//endIndex is optional
     }
 }

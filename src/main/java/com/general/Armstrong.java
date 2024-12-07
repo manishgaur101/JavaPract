@@ -73,4 +73,29 @@ public class Armstrong {
                 .filter(Armstrong::isArmstrong)
                 .forEach(System.out::println);
     }
+
+    /**
+     * Method to count the digit in int variable.
+     * @param num
+     * @return
+     */
+    public static int countDigit(int num){
+        int count = 0;
+        while(num != 0){
+            count++;
+            num = num /10;
+        }
+        return count;
+    }
+
+    /**
+     * Another version of method to check the int is armString number or not.
+     * @return
+     */
+    /*public static boolean isArm(int n){
+        int num =  n;
+        int sum = 0;
+        
+    }*/
 }
+
