@@ -30,7 +30,8 @@ public class MergeIntArray {
      * copy elements from first array to result array
      * uni directional loop on second array
      * copy elements from second array to result array
-     * print result array
+     * print result array.
+     *
      * @param
      *        a - int[] representing first array
      *        b - int[] representing second array
