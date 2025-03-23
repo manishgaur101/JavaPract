@@ -20,7 +20,7 @@ public class Armstrong {
 
         int data = 0;
 
-        if(input.hasNextInt())
+        if(input.hasNextInt()) // Go Inside if input number is of int type
         {
             data = input.nextInt();
         }
@@ -38,10 +38,14 @@ public class Armstrong {
         }
         //printArmstrongNumbers(1,data);
 
+
+        System.out.printf("Is %d an Armstrong number:%s",data,isArm(data));
+        printArmstrongNumbers(100,300);
+
     }
 
     /**
-     * Function to check if input is an armstrong number or not.
+     * Function to check if input is an armstrong number or not using Java8.
      * @param n
      * @return
      */
@@ -70,7 +74,7 @@ public class Armstrong {
      */
     public static void printArmstrongNumbers(int start, int end){
         IntStream.rangeClosed(start,end)
-                .filter(Armstrong::isArmstrong)
+                .filter(Armstrong::isArm)
                 .forEach(System.out::println);
     }
 
@@ -83,7 +87,7 @@ public class Armstrong {
         int count = 0;
         while(num != 0){
             count++;
-            num = num /10;
+            num = num / 10; // Last value will be removed.
         }
         return count;
     }
@@ -92,10 +96,28 @@ public class Armstrong {
      * Another version of method to check the int is armString number or not.
      * @return
      */
-    /*public static boolean isArm(int n){
-        int num =  n;
-        int sum = 0;
-        
-    }*/
+    private static boolean isArm(int n){
+        // Find the digit count in input
+        int count = 0 ,sum = 0;
+        int num = n;
+        while (num > 0)
+        {
+            count++;
+            num = num / 10; // Last digit will be removed
+        }
+        // System.out.println(count);
+
+        // Calculate the sum
+        int temp = 0;
+        num = n;
+        for (int i = 0; i < count; i++) {
+            temp = num % 10; // Last digit will be returned.
+            sum = sum + (int)Math.pow(temp, count);
+            num = num / 10; // Last digit will be removed.
+        }
+
+        // Validate and return
+        return n == sum;
+    }
 }
 
