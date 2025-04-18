@@ -2,7 +2,12 @@ package com.Array;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/*
+Contains duplicate - Easy Problem - LeetCode 217
+Where an int array is given and have to return true/false based on
+whether it contains duplicate or not.
+true When contains duplicates else false;
+*/
 public class ContainDuplicate {
 
     public static void main(String[] args) {
