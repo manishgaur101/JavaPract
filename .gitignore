@@ -3,3 +3,7 @@
 /.idea/
 /.idea/.gitignore
 /.idea/sonarlint/
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
