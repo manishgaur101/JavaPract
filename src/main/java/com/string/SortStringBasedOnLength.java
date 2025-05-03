@@ -25,6 +25,6 @@ public class SortStringBasedOnLength {
 
         //or
         Arrays.sort(s1,(a,b) -> Integer.compare(a.length(), b.length()));
-        return String.join(" ",s1);
+        return String.join(" ",s1); // String array to String conversion works in v8+
     }
 }
