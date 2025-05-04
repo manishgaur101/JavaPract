@@ -12,6 +12,9 @@ public class CharCountJava7 {
         Map<Character,Integer> iMap =  new LinkedHashMap<>();
         for(char c : given.toCharArray()){
             if(iMap.containsKey(c)){
+
+                //iMap.put(c,iMap.getOrDefault(c,0)+1);
+                // Use above one line of below code
                 iMap.put(c,iMap.get(c)+1);
             }
             else{

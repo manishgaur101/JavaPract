@@ -26,5 +26,28 @@ public class StudentWithHighestMarks {
 
         System.out.println("Following students get the highest marks:\n"+iList);
 
+
+        System.out.println("Student with Highest Marks:" + highestMarksStudents(iMap));
+
+    }
+
+    private static Map<Integer, List<String>> highestMarksStudents(Map<String,Integer> map){
+        Map<Integer, List<String>> resultMap =  new LinkedHashMap<>();
+        List<String> studentList =  new ArrayList<>();
+
+        //Loop Over Map
+        int highestMarks = 0;
+        for(Map.Entry<String, Integer> entry : map.entrySet()){
+            if(entry.getValue() > highestMarks){
+                highestMarks = entry.getValue();
+                studentList.clear();
+                studentList.add(entry.getKey());
+            }
+            else if(entry.getValue() == highestMarks){
+                studentList.add(entry.getKey());
+            }
+            resultMap.put(highestMarks,studentList);
+        }
+        return resultMap;
     }
 }
