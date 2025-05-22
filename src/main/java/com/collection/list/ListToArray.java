@@ -10,6 +10,7 @@ public class ListToArray {
         List<String> sList = new Vector<>();
         Collections.addAll(sList,"abc","do","pine","my","life");
 
+        //new String[0] tells toArray() the type of array to return.
         String str[] = sList.toArray(new String[0]);
         System.out.println(Arrays.toString(str));
     }
